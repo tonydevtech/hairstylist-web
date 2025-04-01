@@ -130,6 +130,9 @@ nav ul li a:hover {
     object-fit:contain;
     border-radius: 30px;
 }
+.gallery-item img:hover {
+    padding: 20px 20px;
+}
 section {
     padding: 20px;
     margin: 10px;
