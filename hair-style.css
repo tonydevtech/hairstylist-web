@@ -2,11 +2,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #000;
 }
-
+@font-face {
+    font-family:ABITE ;
+    src: url(fonts/ABITE.ttf);
+}
+@font-face {
+    font-family:ALWSH ;
+    src: url(fonts/ALWSH.TTF);
+}
+@font-face {
+    font-family: Amerp ;
+    src: url(fonts/Amerp.ttf);
+}
+@font-face {
+    font-family: Ampoule ;
+    src: url(fonts/Ampoule.TTF);
+}
+@font-face {
+    font-family: Angel_Bear ;
+    src: url(fonts/Angel_Bear.TTF);
+}
 header {
-    color: #000;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -26,7 +44,16 @@ header video {
     z-index: -1;
     object-fit: cover;
 }
-
+.logo {
+    font-family: Ampoule ;
+    font-size: 70px;
+    font-weight: bold;
+    color: red;
+}
+.logo:hover {
+    color: white;
+    text-shadow: 0 10px 10px black;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -38,15 +65,85 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    font-family: Amerp;
+    font-family: 50px;
+    color: black;
     text-decoration: none;
 }
-
+nav ul li a:hover {
+    color:red;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.header-content h1{
+    font-family: ABITE;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 30px;
+}
+.header-content p{
+    font-family: Ampoule;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 30px;
+}
+ button {
+   
+    font-size: 30px;
+    letter-spacing: 10px;
+    background-color:transparent;
+    color: red;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 10px 10px red;
+}
+ button:hover {
+    color: white;
+    background: red;
+    padding-right: 20px;
+} 
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+.gallery-container h1,h2 {
+    font-family: ABITE;
+    color:#fff;
+    letter-spacing: 10px;
+}
+.gallery-container h2,h1 {
+    font-family: ABITE;
+    color:#fff;
+    letter-spacing: 10px;
+}
+.gallery-item {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    border-radius: 30px;
+}
 section {
     padding: 20px;
     margin: 10px;
-    background: #fff;
+    background: black;
     border-radius: 5px;
+}
+input {
+    display:block;
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+label {
+    color: white;
 }
 
 footer {
@@ -54,4 +151,14 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
+}
+@media (max-width: 786px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
+    } 
 }
